@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* AQVA Colors */
+    --aqva-cyan: #00d3f2;
+    --aqva-cyan-light: #53eafd;
+    --aqva-green: #00d492;
+    --aqva-green-light: #5ee9b5;
+    --aqva-whatsapp: #25d366;
+
+    --aqva-dark: #0f172b;
+    --aqva-card: rgba(29, 41, 61, 0.5);
+    --aqva-text-secondary: #cad5e2;
+    --aqva-text-muted: #90a1b9;
+  }
+
+  body {
+    font-family: 'Arimo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+    color: white;
+    min-height: 100vh;
+    margin: 0;
+  }
+}
+
+/* IMPORTANT: remove Vite starter centering */
+body {
+  display: block;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* IMPORTANT: remove Vite starter global button skin */
+button {
+  font: inherit;
+}
+
+/* AQVA UI primitives */
+@layer components {
+  .aqva-bg {
+    background:
+      radial-gradient(1200px 800px at 20% 0%, rgba(0, 211, 242, 0.10), transparent 60%),
+      radial-gradient(900px 700px at 80% 10%, rgba(0, 212, 146, 0.10), transparent 60%),
+      linear-gradient(135deg, #0a1628 0%, #1a2a3a 100%);
+  }
+
+  .aqva-card {
+    background: var(--aqva-card);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(94, 233, 181, 0.18);
+    border-radius: 24px;
+  }
+
+  .aqva-card-strong {
+    background: rgba(29, 41, 61, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(94, 233, 181, 0.22);
+    border-radius: 24px;
+  }
+
+  .aqva-input {
+    background: rgba(2, 6, 23, 0.55);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 16px;
+    padding: 12px 14px;
+    outline: none;
+  }
+
+  .aqva-input:focus {
+    border-color: rgba(0, 211, 242, 0.65);
+    box-shadow: 0 0 0 3px rgba(0, 211, 242, 0.15);
+  }
+
+  .aqva-divider {
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
+  }
+}
